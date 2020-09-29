@@ -6,6 +6,19 @@
   <title>Document</title>
 </head>
 <body>
-    <h1><%- qwe %></h1>
+    <h1>代辦事項</h1>
+    <input type="text" id="content" name="content">
+    <input type="submit" id="send" value="送出">
+
+    <ul id="list">
+      <% for( let index in todoList ) { %>
+        <li> <%- todoList[index].content %> 
+          <input type="submit" value="刪除" data-id='<%= index %>'>
+        </li>
+      <% } %>
+    </ul>
+
+
+    <script src="/javascripts/index.js"></script>
 </body>
 </html>
